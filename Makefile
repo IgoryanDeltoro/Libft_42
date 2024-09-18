@@ -4,8 +4,8 @@ CC = cc
 CFLAGS = -Wall -Wextra -Werror
 AR = ar rcs
 
-SRC = $(filter-out %_bonus.c, $(wildcard *.c))
-BONUS_SRC = $(wildcard *_bonus.c)
+SRC = $(shell find . -name "*.c" ! -name "*_bonus.c")
+BONUS_SRC = $(shell find . -name "*_bonus.c")
 
 BONUS_OBJ = $(BONUS_SRC:.c=.o)
 OBJ = $(SRC:.c=.o)
