@@ -1,4 +1,4 @@
-./.vscode
-./libft.a
-./a.out
-*.c
+.vscode
+libft.a
+a.out
+git *.o
