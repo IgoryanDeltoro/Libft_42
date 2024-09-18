@@ -1,4 +1,4 @@
 .vscode
 libft.a
-a.out
-git *.o
+./a.out
+*.o
