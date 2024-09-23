@@ -6,7 +6,7 @@
 /*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/09 15:08:22 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/12 17:44:53 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/16 12:30:37 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,10 @@ static void	*free_alocated_words(char **words, int count)
 
 	i = 0;
 	while (i < count)
+	{
 		free(words[i]);
+		i++;
+	}
 	free(words);
 	return (NULL);
 }
@@ -97,7 +100,7 @@ char	**ft_split(char const *s, char c)
 	arr = (char **)malloc(sizeof(char *) * (words + 1));
 	if (!arr)
 		return (NULL);
-	arr = hendle_words(arr, s, c);
 	arr[words] = NULL;
+	arr = hendle_words(arr, s, c);
 	return (arr);
 }

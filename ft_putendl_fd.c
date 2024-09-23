@@ -6,7 +6,7 @@
 /*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 14:41:40 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/11 14:57:14 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/21 15:07:35 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	if (!s || !fd)
+	if (!s || !(fd >= 0))
 		return ;
 	while (*s)
 	{

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   strrchr.c                                          :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibondarc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 12:31:10 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/06 12:37:09 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/13 13:32:35 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,14 @@ char	*ft_strrchr(const char *s, int c)
 {
 	char	*re;
 
-	re = 0;
-	if (c == '\0')
-		return ((char *)s);
+	re = NULL;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			re = (char *)s;
 		s++;
 	}
-	if (re)
-		return (re);
-	return (0);
+	if ((char)c == '\0')
+		return ((char *)s);
+	return (re);
 }

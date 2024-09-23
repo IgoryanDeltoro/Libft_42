@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibondarc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 12:13:19 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/07 12:30:18 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/13 15:40:24 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	{
 		if (*ss == cc)
 		{
-			return (ss);
+			return ((void *)ss);
 		}
 		ss++;
 	}

@@ -6,7 +6,7 @@
 /*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/11 14:48:54 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/11 15:05:10 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/13 13:53:00 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,25 +19,28 @@ void	ft_putchar(char c, int fd)
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	if (n == -2147483648)
+	long	num;
+
+	num = n;
+	if (num == -2147483648)
 	{
 		ft_putchar('-', fd);
 		ft_putchar('2', fd);
 		ft_putnbr_fd(147483648, fd);
 	}
-	else if (n < 0)
+	else if (num < 0)
 	{
 		ft_putchar('-', fd);
-		n = -n;
-		ft_putnbr_fd(n, fd);
+		num = -num;
+		ft_putnbr_fd(num, fd);
 	}
-	else if (n > 9)
+	else if (num > 9)
 	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
+		ft_putnbr_fd(num / 10, fd);
+		ft_putnbr_fd(num % 10, fd);
 	}
 	else
 	{
-		ft_putchar(n + 48, fd);
+		ft_putchar(num + 48, fd);
 	}
 }

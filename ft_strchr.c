@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibondarc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/06 11:14:27 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/06 12:13:36 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/13 13:27:09 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,15 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	if (c == '\0')
-		return ((char *)s);
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 		{
 			return ((char *)s);
 		}
 		s++;
 	}
-	return (0);
+	if ((char)c == '\0')
+		return ((char *)s);
+	return (NULL);
 }

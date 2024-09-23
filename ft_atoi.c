@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ibondarc <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ibondarc <ibondarc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/07 10:54:09 by ibondarc          #+#    #+#             */
-/*   Updated: 2024/09/07 11:19:02 by ibondarc         ###   ########.fr       */
+/*   Updated: 2024/09/13 12:50:16 by ibondarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,8 @@ int	whitespace(const char *str, int *idx)
 		sign *= -1;
 		i++;
 	}
-	else
-	{
+	else if (str[i] == 43)
 		i++;
-	}
 	*idx = i;
 	return (sign);
 }
